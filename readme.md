@@ -1,3 +1,7 @@
+npm install @badeball/cypress-cucumber-preprocessor 
+
+npm i cypress-mochawesome-reporter
+
 npx cypress run --spec cypress/e2e/BDD/Regression/flipkartLogin.feature --headed --browser chrome
 
 
