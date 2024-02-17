@@ -4,12 +4,23 @@
   "description": "Automation Framework for UI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test --browser chrome",
+    "recordDashBoardTest": "npm run test --record --key fa423514-5a84-42a7-b6a0-b5e7191bba12 --reporter mochawesome",
+    "GreenKartTest": "npm run test --spec \"cypress/integration/GreenKart/*\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "test-report/reports/json-report/results.json"
+    }
   },
   "author": "Sunil Bombe",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.3"
+    "cypress": "^13.6.3",
+    "multiple-cucumber-html-reporter": "^3.6.2"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",

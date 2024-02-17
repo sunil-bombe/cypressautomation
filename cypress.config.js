@@ -6,7 +6,6 @@ const {
   preprocessor,
 } = require("@badeball/cypress-cucumber-preprocessor/browserify");
 
-
 async function setupNodeEvents(on, config) {
   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
   await addCucumberPreprocessorPlugin(on, config);
@@ -25,6 +24,12 @@ module.exports = defineConfig({
     runMode: 1,
    // openMode: 0,
   },
+  screenshotOnRunFailure: true,
+  screenshotsFolder:"test-report/reports/screenshots",
+  video: true,
+  videosFolder:"test-report/reports/videos",
+  videoCompression: true,
+  trashAssetsBeforeRuns: true,
   env: {
     url:"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
   },
