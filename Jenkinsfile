@@ -5,6 +5,10 @@ pipeline {
         PATH = "$PATH:/usr/local/bin"
     }
 
+     parameters {
+        string(name: 'BUILD_ENV', defaultValue: 'development', description: 'Environment to build for (e.g., development, production)')
+    }
+
     stages {
         stage('Checkout') {
             steps {
