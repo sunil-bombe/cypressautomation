@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'cypress-cucumber']], userRemoteConfigs: [[url: 'https://github.com/sunil-bombe/cypressautomation.git', credentialsId: GIT_CREDENTIALS]]])
+                sh 'git checkout cypress-cucumber'
             }
         }
         stage('Install Dependencies') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh './node_modules/.bin/cypress run'
+                sh 'npx cypress run'
             }
         }
     }
