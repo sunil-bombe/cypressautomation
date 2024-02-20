@@ -6,13 +6,15 @@ pipeline {
     }
 
      parameters {
-        string(name: 'BUILD_ENV', defaultValue: 'development', description: 'Environment to build for (e.g., development, production)')
+        string(name: 'BRANCH', defaultValue: 'cypress-cucumber', description: 'Environment to build for (e.g., development, production)')
+        string(name: 'TAGS', defaultValue: '@Regression', description: 'Environment to build for (e.g., development, production)')
+        string(name: 'BROWSER', defaultValue: 'chrome', description: 'Environment to build for (e.g., development, production)')
     }
 
     stages {
         stage('Checkout') {
             steps {
-                sh 'git checkout cypress-cucumber'
+                sh 'git checkout ${params.BRANCH}'
             }
         }
         stage('Install Dependencies') {
