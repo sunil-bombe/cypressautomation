@@ -25,7 +25,7 @@ pipeline {
 
     post {
         always {
-            cleanWs()
+            echo 'clean workspace'
         }
         success{
             echo 'succesfull'
