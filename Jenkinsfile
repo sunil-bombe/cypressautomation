@@ -18,15 +18,20 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'npx cypress run'
+                sh 'node runner.js'
             }
         }
     }
 
     post {
         always {
-            // Clean up workspace
             cleanWs()
+        }
+        success{
+            echo 'succesfull'
+        }
+        failure{
+            echo 'failed'
         }
     }
 }
