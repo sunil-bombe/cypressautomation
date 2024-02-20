@@ -6,6 +6,7 @@ console.log("Execute commands");
 // Wrap the logic in an async function to use 'await'
 async function runCommands() {
   await executeCommand("npx cypress run --env tags='@Regression' --headed --browser chrome");
+  //await executeCommand("npx cypress run --headed --browser chrome");
   await executeCommand("node cucumber-html-report.js");
 }
 

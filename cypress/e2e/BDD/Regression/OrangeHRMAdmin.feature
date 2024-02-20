@@ -1,21 +1,5 @@
-Feature: Orange HRM portal login Feature
+Feature: Orange HRM portal Admin Feature
 
-@Smoke @Regression
-Scenario: Verify login with valid Credential
-Given visit to the orangeHRM portal
-When user enter valid Credential
-Then verify user is able to login into orangeHRM portal
-
-
-# Examples for parameterised step def files
-
-@Regression
-Scenario: Verify login with InValid Credential
-Given visit to the orangeHRM portal
-When user enter "Admin" as username and "admin234" as password
-Then verify user is able to login into orangeHRM portal
-
-# Examples for datatable step def 
 
 @DataTableExample @Regression
 Scenario: Verify user should be able to create user on Admin page

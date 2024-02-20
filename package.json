@@ -4,6 +4,7 @@
   "description": "Automation Framework for UI",
   "main": "index.js",
   "scripts": {
+    "cy:run": "cypress-parallel run",
     "test": "npx cypress run",
     "headTest": "npm run test --headed",
     "chromeTest": "npm run test --browser chrome",
@@ -20,6 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.3",
+    "cypress-parallel": "^0.14.0",
     "multiple-cucumber-html-reporter": "^3.6.2"
   },
   "dependencies": {
