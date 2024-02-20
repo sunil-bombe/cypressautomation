@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh `git checkout ${params.BRANCH}`
+                sh "git checkout ${params.BRANCH}"
             }
         }
         stage('Install Dependencies') {
