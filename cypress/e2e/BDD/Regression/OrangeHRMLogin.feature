@@ -9,7 +9,7 @@ Then verify user is able to login into orangeHRM portal
 
 # Examples for parameterised step def files
 
-@Regression
+@Smoke
 Scenario: Verify login with InValid Credential
 Given visit to the orangeHRM portal
 When user enter "Admin" as username and "admin234" as password
