@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        GIT_CREDENTIALS = credentials('sunil-bombe')
-    }
-
     stages {
         stage('Checkout') {
             steps {
