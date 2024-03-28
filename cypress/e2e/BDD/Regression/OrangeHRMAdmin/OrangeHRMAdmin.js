@@ -52,5 +52,7 @@ Then("fill the form details",(dataTable)=>{
 })
 
 Then("click on save button from the admin page",()=>{
- cy.log("click on save button from the admin page...!")
+ cy.log("click on save button from the admin page...!");
+ assert.isTrue(false);
+
 })

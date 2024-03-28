@@ -4,7 +4,9 @@
   "description": "Automation Framework for UI",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress-parallel run",
+  "cy:run": "cypress run",
+  "cy:parallel" : "cypress-parallel -s cy:run -t 2 -d /Users/sunilbombe/cypressframework/cypress/e2e/BDD/Regression -a --env tags='@Regression'",
+ 
     "test": "npx cypress run",
     "headTest": "npm run test --headed",
     "chromeTest": "npm run test --browser chrome",

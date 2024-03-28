@@ -4,5 +4,5 @@
     "ci-build-id": "your-build-id",
     "parallelism": 2,
     "specPattern": "**/*.feature"
-  }
+}
   

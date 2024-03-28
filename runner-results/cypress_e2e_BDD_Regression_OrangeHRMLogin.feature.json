@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 3,
+  "passes": 2,
+  "pending": 0,
+  "failures": 1,
+  "start": "2024-02-21T17:42:32.487Z",
+  "duration": 38108,
+  "file": "cypress/e2e/BDD/Regression/OrangeHRMLogin.feature"
+}
